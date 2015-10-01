@@ -1,5 +1,5 @@
 body {
-    background-image: url("assets/images/delhap.jpg");
+    background-color: yellow;
 }
 
 h1 {
@@ -55,15 +55,11 @@ a {
 }
 
 #image1 {
-    text-align: left;
     margin-left: 50px;
-    text-decoration: none;
 }
 
 #image2 {
-    text-align: left;
     margin-left: 50px;
-    text-decoration: none;
 }
 
 #image3 {
