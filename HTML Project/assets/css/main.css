@@ -10,6 +10,8 @@
 
 .row {
   margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .quote {
@@ -65,8 +67,8 @@ body {
   height: 200px;
 }
 .footer {
-  color: #efefef;
-  background-color: #;
+  color: #000;
+  background-color: #fff;
 }
 .footer a {
   color: #9af7fe;
