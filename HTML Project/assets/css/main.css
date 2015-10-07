@@ -1,62 +1,77 @@
-.nav a {
-  color: #5a5a5a;
-  font-size: 11px;
-  font-weight: bold;
-  padding: 14px 10px;
-  text-transform: uppercase;
+/*
+ *= require bootstrap/dist/css/bootstrap.min.css
+ *= require_self
+ */
+
+
+.features .glyphicon {
+  font-size: 32px;
 }
 
-.nav li {
-  display: inline;
+.row {
+  margin-bottom: 20px;
 }
 
-.jumbotron {
-  background-image:url('http://goo.gl/04j7Nn');
-  height: 500px;
+.quote {
+  background-color: #444;
+  color: #e1e1e1;
+}
+.quote blockquote {
+  border: none;
+  margin: 0;
+}
+.quote footer {
+  color: #c1c1c1;
+}
+section, header {
+  background-color: #fff;
+}
+body {
+
+}
+.footer {
+  padding: 20px 0;
 }
 
-.jumbotron .container {
+
+#demo-nav {
+  display: none;
+}
+
+.show-nav #demo-nav {
+  display: block;
+}
+
+
+
+
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
   position: relative;
-  top:100px;
+  min-height: 100%;
 }
-
-.jumbotron h1 {
-  color: #fff;
-  font-size: 48px;  
-  font-family: 'Shift', sans-serif;
-  font-weight: bold;
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 200px;
 }
-
-.jumbotron p {
-  font-size: 20px;
-  color: #fff;
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 200px;
 }
-
-.learn-more {
-  background-color: #f7f7f7;
+.footer {
+  color: #efefef;
+  background-color: #333;
 }
-
-.learn-more h3 {
-  font-family: 'Shift', sans-serif;
-  font-size: 18px;
-  font-weight: bold;
+.footer a {
+  color: #9af7fe;
 }
-
-.learn-more a {
-  color: #00b0ff;
-}
-
-.neighborhood-guides {
-    background-color: #efefef;
-    border-bottom: 1px solid #dbdbdb;
-}
-
-.neighborhood-guides h2 {
-    color: #393c3d;
-    font-size: 24px;
-}
-
-.neighborhood-guides p {
-    font-size: 15px;
-    margin-bottom: 13px;
+@media only screen and (max-width: 768px) {
+  body { margin-bottom: 400px; }
+  .footer { height: 400px; }
 }
