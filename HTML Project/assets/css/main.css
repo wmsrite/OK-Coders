@@ -1,79 +1,60 @@
-/*
- *= require bootstrap/dist/css/bootstrap.min.css
- *= require_self
- */
 
-
-.features .glyphicon {
-  font-size: 32px;
+.nav li {
+  display: inline;
+  color: #d3d3d3;
 }
 
-.row {
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+.jumbotron {
+  background-image:url('../images/background.jpg');
+  height: 425px;
 }
 
-.quote {
-  background-color: #444;
-  color: #e1e1e1;
-}
-.quote blockquote {
-  border: none;
-  margin: 0;
-}
-.quote footer {
-  color: #c1c1c1;
-}
-section, header {
-  background-color: #fff;
-}
-body {
-
-}
-.footer {
-  padding: 20px 0;
-}
-
-
-#demo-nav {
-  display: none;
-}
-
-.show-nav #demo-nav {
-  display: block;
-}
-
-
-
-
-
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
+.jumbotron .container {
   position: relative;
-  min-height: 100%;
+  top: 10px;
 }
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 200px;
+
+#jumborow {
+  height: 10px;
 }
+
+.jumbotron h2 {
+  color: #000;
+  font-size: 30px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 15px;
+  color: #000;
+}
+
+.btn {
+  background-color: #FF6126;
+  border-radius: 0px;
+}
+
+.form-control {
+  border-radius: 0px;
+}
+
 .footer {
-  position: absolute;
+  position: relative;
+  color: #000;
+  background-color: #fff;
+  padding: 20px 0;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 200px;
+  height: 150px;
 }
-.footer {
-  color: #000;
-  background-color: #fff;
+
+.footer h4 {
+  text-align: center;
+  padding-top: 10px;
 }
-.footer a {
-  color: #9af7fe;
-}
-@media only screen and (max-width: 768px) {
-  body { margin-bottom: 400px; }
-  .footer { height: 400px; }
+
+.footer p {
+  color: #d3d3d3;
 }
