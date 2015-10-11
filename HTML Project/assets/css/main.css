@@ -1,12 +1,26 @@
 
+.nav {
+  padding-top: 20px;
+}
+
 .nav li {
   display: inline;
+  padding-right: 20px;
+  font-size: 15px;
+  font-family: sans-serif;
   color: #d3d3d3;
+}
+
+.nav button {
+  background-color: #FF6126;
+  color: #fff;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .jumbotron {
   background-image:url('../images/background.jpg');
-  height: 425px;
+  height: 300px;
 }
 
 .jumbotron .container {
@@ -14,14 +28,15 @@
   top: 10px;
 }
 
-#jumborow {
-  height: 10px;
+.jumbotron h2 strong {
+  color: #000;
+  font-size: 30px;  
+  font-weight: bold;
 }
 
 .jumbotron h2 {
-  color: #000;
+  color: #FF6126;
   font-size: 30px;  
-  font-family: 'Shift', sans-serif;
   font-weight: bold;
 }
 
@@ -30,12 +45,15 @@
   color: #000;
 }
 
-.btn {
+.jumbotron button {
   background-color: #FF6126;
+  font-weight: bold;
+  color: #fff;
   border-radius: 0px;
+  margin-left: -30px;
 }
 
-.form-control {
+.jumbotron input {
   border-radius: 0px;
 }
 
@@ -57,4 +75,5 @@
 
 .footer p {
   color: #d3d3d3;
+  text-align: center;
 }

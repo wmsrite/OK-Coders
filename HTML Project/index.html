@@ -5,55 +5,57 @@
     <meta charset="utf-8">
     <title>Eterna Modern Web Design</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
     
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="assets/css/bootstrap.min.css" media="all" rel="stylesheet" />
+<!--<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" media="all" rel="stylesheet" /> -->
     <link href="assets/css/main.css" media="all" rel="stylesheet" />  
   </head>
 
   <body>
-<!-- <span class="visible-xs">Size: XS</span>
-<span class="visible-sm">Size: SM</span>
-<span class="visible-md">Size: MD</span>
-<span class="visible-lg">Size: LG</span> -->
-    <div class="nav">
-      <div class="container">
+    <div class="container">
+      <div class="nav">
+      <div role="navigation">
         <li>
-        <ul class="pull-left">
-          <a class="navbar-brand" href="#"><img alt="Brand" src="assets/images/logo.png"></a>
+        <ul class="pull-left" class="navbar-brand">
+          <a role="presentation" href="#"><img alt="Brand" src="assets/images/logo.png"></a>
         </ul>
-        <ul class="pull-right">
-          <div class='navbar-brand' data-toggle='dropdown'><button type='button' class='btn btn-default btn-primary'>Home</button><span class='caret'></span></div>
-          <div class='navbar-brand' data-toggle='dropdown'>Features <span class='caret'></span></div>
-          <div class='navbar-brand' data-toggle='dropdown'>Pages <span class='caret'></span></div>
-          <div class='navbar-brand' data-toggle='dropdown'>Portfolio <span class='caret'></span></div>
-          <div class='navbar-brand' data-toggle='dropdown'>Blog <span class='caret'></span></div>
-          <div class='navbar-brand' data-toggle='dropdown'>Contact </div>
+        <ul class="pull-right" class="nav nav-pills">
+          <li role"presentation" data-toggle='dropdown'><button type='button' class='btn'>Home <span class='caret'></span></button></li>
+          <li role="presentation" data-toggle='dropdown'>Features <span class='caret'></span></li>
+          <li role="presentation" data-toggle='dropdown'>Pages <span class='caret'></span></li>
+          <li role="presentation" data-toggle='dropdown'>Portfolio <span class='caret'></span></li>
+          <li role="presentation" data-toggle='dropdown'>Blog <span class='caret'></span></li>
+          <li role="presentation" data-toggle='dropdown'>Contact </li>
         </ul>
         </li>
       </div>
+      </div>
     </div>
-
-    <div class="jumbotron">
-      <div class="container">
-        <div class='col-md-6 col-xs-offset-0'>
+    <div class="container">
+      <div class="jumbotron">
+          <div class='col-md-6'>
             <img src='assets/images/iMac.png' alt='iMac'/>
           </div>
-          <div class='col-md-6 col-xs-offset-0 col-sm-offset-0'>
-            <h2><strong>Put your Opt in form</strong></h2>
+          <div class='col-md-6'>
+            <h2><strong>Put your</strong> Opt in form</h2>
             <p>Vim porro dicam reprehendunt te, populo quodsi dissentiet cum ad. Ne natum deseruisse vis. lisque deruisse sententiae mel ne, dolores appetere vim ut. Sea no tamquam reprimique.</p>
           </div>
-          <div class='col-md-3 col-xs-offset-0'>
+          <div class='col-md-3'>
             <input class="form-control input-lg" id="inputlg" type="text">
           </div>
-          <div class='col-md-3 col-xs-offset-0'>
-            <button type='button' class='btn btn-lg btn-primary'>Subscribe</button>
+          <div class='col-md-3'>
+            <button class='btn btn-lg' id='btnlg' type='button'>Subscribe</button>
           </div>
       </div>
-    </div> 
-    
-  <div class="learn-more">
-	  <div class="container">
+    </div>
+    <div class="container">  
+      <div class="learn-more">
 	     <div class='col-sm-1'>
           <img src="assets/images/glyph1.png">
        </div>
@@ -63,7 +65,7 @@
         <h6><strong>Learn More</strong></h6>
       </div>
 	
-		    <div class='col-sm-1'>
+		  <div class='col-sm-1'>
         <img src="assets/images/glyph2.png">
       </div>
       <div class='col-sm-3 col-xs-3'>
@@ -72,7 +74,7 @@
         <h6><strong>Learn More</strong></h6>
       </div>
 		
-		    <div class='col-sm-1'>
+		  <div class='col-sm-1'>
         <img src="assets/images/glyph3.png">
       </div>
       <div class='col-sm-3 col-xs-3'>
@@ -83,8 +85,8 @@
 	   </div>
 	  </div>
 	</div>
-  <div class='footer'>
-    <div class='container'>
+  <div class='container'>
+    <div class='footer'>
     <div class='col-sm-6 col-sm-offset-3'>
           <h4>Our <strong>Pricing</strong></h4>
           <p>Lorem Ipsum dolar sit ameet labores dolorum scriptorem eum an, ie quodsi sanctus neglegentur.</p>
