@@ -1,4 +1,19 @@
 
+svg text {
+   letter-spacing: -1px;
+   -webkit-animation: mymove 1s; /* Chrome, Safari, Opera */
+   animation: mymove 1s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+   50% {letter-spacing: 5px;}
+}
+/* Standard syntax */
+@keyframes mymove {
+   50% {letter-spacing: 5px;}
+}
+
 .nav {
   padding-top: 20px;
 }
@@ -76,4 +91,19 @@
 .footer p {
   color: #d3d3d3;
   text-align: center;
+}
+
+svg text {
+   letter-spacing: -1px;
+   -webkit-animation: mymove 1s; /* Chrome, Safari, Opera */
+   animation: mymove 1s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+   50% {letter-spacing: 5px;}
+}
+/* Standard syntax */
+@keyframes mymove {
+   50% {letter-spacing: 5px;}
 }
