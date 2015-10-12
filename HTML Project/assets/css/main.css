@@ -30,19 +30,19 @@
 
 .jumbotron h2 strong {
   color: #000;
-  font-size: 30px;  
+  font-size: 25px;  
   font-weight: bold;
 }
 
 .jumbotron h2 {
   color: #FF6126;
-  font-size: 30px;  
+  font-size: 25px;  
   font-weight: bold;
 }
 
 .jumbotron p {
   font-size: 15px;
-  color: #000;
+  color: #bababa;
 }
 
 .jumbotron button {
