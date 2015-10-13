@@ -33,6 +33,10 @@ svg text {
   padding-left: 15px;
 }
 
+.learn-more {
+  padding-top: 20px;
+}
+
 .jumbotron {
   background-image:url('../images/background.jpg');
   height: 300px;
@@ -58,18 +62,18 @@ svg text {
 .jumbotron p {
   font-size: 15px;
   color: #bababa;
+  padding-bottom: 20px;
 }
 
-.jumbotron button {
+.form-group button {
   background-color: #FF6126;
   font-weight: bold;
   color: #fff;
-  border-radius: 0px;
-  margin-left: -30px;
 }
 
-.jumbotron input {
-  border-radius: 0px;
+.form-group input {
+  width: 100%;
+  padding-bottom: 20px;
 }
 
 .footer {
@@ -91,19 +95,4 @@ svg text {
 .footer p {
   color: #d3d3d3;
   text-align: center;
-}
-
-svg text {
-   letter-spacing: -1px;
-   -webkit-animation: mymove 1s; /* Chrome, Safari, Opera */
-   animation: mymove 1s;
-}
-
-/* Chrome, Safari, Opera */
-@-webkit-keyframes mymove {
-   50% {letter-spacing: 5px;}
-}
-/* Standard syntax */
-@keyframes mymove {
-   50% {letter-spacing: 5px;}
 }
