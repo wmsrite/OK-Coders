@@ -39,7 +39,6 @@ svg text {
 
 .jumbotron {
   background-image:url('../images/background.jpg');
-  height: 300px;
 }
 
 .jumbotron .container {
@@ -83,8 +82,6 @@ svg text {
   padding: 20px 0;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 150px;
 }
 
 .footer h4 {
