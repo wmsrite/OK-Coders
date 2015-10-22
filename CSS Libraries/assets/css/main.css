@@ -1,0 +1,96 @@
+
+svg text {
+   letter-spacing: -1px;
+   -webkit-animation: mymove 1s; /* Chrome, Safari, Opera */
+   animation: mymove 1s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+   50% {letter-spacing: 5px;}
+}
+/* Standard syntax */
+@keyframes mymove {
+   50% {letter-spacing: 5px;}
+}
+
+.nav {
+  padding-top: 20px;
+}
+
+.nav li {
+  display: inline;
+  padding-right: 20px;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: #d3d3d3;
+}
+
+.nav button {
+  background-color: #FF6126;
+  color: #fff;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.learn-more {
+  padding-top: 20px;
+}
+
+.jumbotron {
+  background-image:url('../images/background.jpg');
+}
+
+.jumbotron .container {
+  position: relative;
+  top: 10px;
+}
+
+.jumbotron h1 {
+  text-align: center;
+  color: #000;
+  font-size: 25px;  
+  font-weight: bold;
+}
+
+.jumbotron h2 {
+  color: #FF6126;
+  font-size: 25px;  
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 15px;
+  color: #bababa;
+  padding-bottom: 20px;
+}
+
+.form-group button {
+  background-color: #FF6126;
+  font-weight: bold;
+  color: #fff;
+}
+
+.form-group input {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.footer {
+  position: relative;
+  color: #000;
+  background-color: #fff;
+  padding: 20px 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer h4 {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.footer p {
+  color: #d3d3d3;
+  text-align: center;
+}
