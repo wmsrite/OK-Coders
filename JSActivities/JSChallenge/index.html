@@ -1,32 +1,140 @@
 <!DOCTYPE html>  
 <html>  
 <head>  
-<meta charset=utf-8 />  
+<meta charset=utf-8 />
+<link rel="stylesheet" type="text/css" href="assets/css/main.css">  
 <title>RPS GAME</title>  
 </head>  
 <body>
 
-<strong>Rock Paper Scissors</strong>
-<input type="button" value="Play game" onclick="playGame()"> 
-<input type="button" value="New game" onclick="generateRandomNumber()">
+<h1>Rock Paper Scissors</h1>
+<div id="game">
+  <div id="userSelection">
+   <h2>Make your selection</h2><h3>Choose Wisely!!</h3>
+     <ul>
+		<li class="selection" id="rock">
+	  	<button onclick="playGame()"><img src="assets/images/rock.png" alt="Rock" onclick="playWith('rock')"/></button>
+		</li>
 
-	<script type="text/javascript">
-		var ranNum;
-		function playGame ( ) {
-  		var answer = prompt("Guess a number between 1 and 10!");
-  		if(answer > ranNum) { alert("Guess lower!"); }
-  		if(answer < ranNum) { alert("Guess higher!!"); }
-  		if(answer == ranNum) { alert("Correct!"); return true; }
+		<li class="selection" id="paper">
+	  	<button onclick="playGame()"><img src="assets/images/paper.png" alt="Paper" onclick="playWith('paper')"/></button>   
+		</li>
 
-  		return false;
+		<li class="selection" id="scissor">
+	 	<button onclick="playGame()"><img src="assets/images/scissor.png" alt="Scisor" onclick="playWith('scissor')"/></button>
+		</li>
+     </ul>
+  </div>
+
+  <div id="result"></div>
+  <div id="score">
+  	<ul>
+    	<li id="computerScore"><h4>Computer Score</h4></li>
+    	<li id="playerScore"><h4>Player Score</h4></li>
+    	<li id="tieScore"><h4>Draws</h4></li>
+  	</ul>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript">
+
+// Global variable for remember wich option has selected the user
+var userOption = undefined;
+
+function playWith(option){
+   // first, we deselect the previous selected element (if exist)
+   if (userOption != undefined)
+   {
+      userSelectionElement = document.getElementById(userOption);
+      // we remove the purple border (if exist)
+      userSelectionElement.style.border = "5px #F8F8F8  solid";
+   }	 		
+   // then, we select the user option and we add 
+   // a purple border
+   userOption = option;
+   userSelectionElement = document.getElementById(option);
+   userSelectionElement.style.border = "5px #990066 solid";
 }
-		function generateRandomNumber() {
-  		ranNum = Math.floor(Math.random()*10)+1;
-}
-		window.onload = function() { generateRandomNumber();}
 
-	</script>
+function playGame(){
+  	 		var computerOption = Math.random();
+			if (computerOption <0.34){
+				computerOption = "rock";
+			}else if(computerOption <=0.67){
+				computerOption = "paper";
+			}else{
+				computerOption = "scissor";
+			}
+			
+			resultMessage = compare(userOption, computerOption);
+			
+			document.getElementById("result").innerHTML = 
+			"<p>User selects: " + userOption + "</p>" + "<p>Computer selects: " 
+			+ computerOption + "</p> <p>" + resultMessage + "</p>";
+			
+  	    }
 
+function score(){
+			var computerScore;
+			var playerScore;
+			var tieScore;
+			
+		   	document.getElementById("computerScore").innerHTML = parseInt(computerScore.innerHTML)++;
 
+			document.getElementById("playerScore").innerHTML = parseInt(playerScore.innerHTML)++;
+		
+			document.getElementById("tieScore").innerHTML = parseInt(tieScore.innerHTML)++;
+
+	}  
+
+function compare(userSelection, computerSelection){
+		 
+
+		    if (userSelection == computerSelection)
+		    {
+		       return "It is a draw!  You didn't lose. YET!!";
+		       tieScore++; //increments score
+		    }
+		    
+		    if (userSelection == "rock")
+		    {
+		        if (computerSelection == "scissor")
+		        {
+		             return "You win.";
+		             playerScore++; //increments score
+
+		        } else {
+		            return "The computer wins. You chose poorly.";
+		            computerScore++; //increments score
+		        }
+		        
+		    } else if (userSelection == "paper") {
+		        
+		        if (computerSelection == "rock")
+		        {
+		             return "You win." ;
+		             playerScore++; //increments score
+
+		        } else if("scissor") {
+		            return "The computer wins. You chose poorly." ;
+		            computerScore++; //increments score
+		        }
+		        
+		    } else if (userSelection == "scissor") {
+		      
+		        if (computerSelection == "rock")
+		        {
+		            return "The computer wins. You chose poorly.";
+		            computerScore++; //increments score
+
+		        }else{
+		            return "You win.";
+		            playerScore++; //increments score
+		        }
+		    }
+		}
+
+</script>
 </body>
 </html>
