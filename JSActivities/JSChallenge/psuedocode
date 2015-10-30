@@ -1,0 +1,7 @@
+Construct framework for User Selection
+Add images for User Choice of Selection and create a Button for images
+Create a Scoreboard than posts the results of each game
+Use a function to generate the Computers' Random Selection
+Use a function to iterate the result of each game to the Scoreboard
+Use a function to compare the User and Computer selections and generate results for each game
+

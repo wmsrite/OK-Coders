@@ -1,46 +1,103 @@
-h1 {
-    text-align: center;
-    color: blue;
+
+svg text {
+   letter-spacing: -1px;
+   -webkit-animation: mymove 2s; /* Chrome, Safari, Opera */
+   animation: mymove 1s;
 }
 
-#game {
-    background-color: #d3d3d3;
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+   50% {letter-spacing: 5px;}
+}
+/* Standard syntax */
+@keyframes mymove {
+   50% {letter-spacing: 5px;}
+}
+
+.nav {
+  padding-top: 20px;
+}
+
+.nav li {
+  display: inline;
+  padding-right: 20px;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: #d3d3d3;
+}
+
+.nav button {
+  background-color: #00c0ff;
+  color: #fff;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.row {
+    background-color: #00c0ff;
     border-radius: 15px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.jumbotron {
+  background-image:url('../images/logo.png');
 }
 
 #userSelection {
     text-align: center;
     padding-top: 10px;
     padding: 30px;
-    margin: 10px; 
+    margin-left: 40px; 
 }
 
 #result {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     font-size: 20px;
 }
 
 #score {
     text-align: center;
+    padding-top: 10px;
     padding: 30px;
+    margin-left: 15px; 
     font-size: 20px;
 }
 
 #score li {
-    float: left;
-    list-style: none; 
-    margin-left: 220px;
+    text-align: center;
+    list-style: none;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+#computerScore {
+    font-size: 20px;
+}
+
+#playerScore {
+    font-size: 20px;
+}
+
+#tieScore {
+    font-size: 20px;
 }
 
 .selection {
-	float: center;
-    vertical-align: center;
 	list-style: none;
     width: 130px;
     border: 5px #F8F8F8  solid;
     border-radius: 15px;
-    margin: 30px; 
+    margin: 70px;
 }
 
 .selection img {

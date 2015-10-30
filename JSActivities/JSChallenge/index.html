@@ -1,57 +1,89 @@
 <!DOCTYPE html>  
 <html>  
 <head>  
-<meta charset=utf-8 />
-<link rel="stylesheet" type="text/css" href="assets/css/main.css">  
-<title>RPS GAME</title>  
+	<meta charset="utf-8" />
+	<title>RPS GAME</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/animate.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">  
 </head>  
 <body>
-
-<h1>Rock Paper Scissors</h1>
+<div class="container">
+      <div class="nav">
+      <div role="navigation">
+        <ul class="pull-left" class="navbar-brand">
+        <svg width="450" height="30" style="padding-left: 50px; margin-top: 5px;">
+           <text x="35" y="17" font-family="sans-serif" font-size="23" font-weight="bold" letter-spacing = "-1px" fill="#555">Rock Paper Scissors</text>
+        </svg>
+        </ul>
+        <ul class="pull-right" class="nav nav-pills">
+          <li role"presentation" data-toggle='dropdown'><button type='button' class='btn'>Home <span class='caret'></span></button></li>
+          <li role="presentation" data-toggle='dropdown'><a href="http://robertstephens225@hotmail.com"> Contact</a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+<div class="jumbotron">
+<div class="container">
 <div id="game">
+	<div class='col-md-12 col-sm-12 col-xs-12'>
+	<h2>Make your selection...........choose wisely!!</h2>
+	</div>
+ <div class="row">
+  <div class="wow bounceInUp">
   <div id="userSelection">
-   <h2>Make your selection</h2><h3>Choose Wisely!!</h3>
-     <ul>
+    <ul>	
+    <div class='col-md-4 col-sm-4 col-xs-4'>
 		<li class="selection" id="rock">
 	  	<button onclick="playGame()"><img src="assets/images/rock.png" alt="Rock" onclick="playWith('rock')"/></button>
-		</li>
-
+		</li>	
+	</div>
+	<div class='col-md-4 col-sm-4 col-xs-4'>
 		<li class="selection" id="paper">
 	  	<button onclick="playGame()"><img src="assets/images/paper.png" alt="Paper" onclick="playWith('paper')"/></button>   
 		</li>
-
+	</div>
+	<div class='col-md-4 col-sm-4 col-xs-4'>
 		<li class="selection" id="scissor">
 	 	<button onclick="playGame()"><img src="assets/images/scissor.png" alt="Scisor" onclick="playWith('scissor')"/></button>
 		</li>
-     </ul>
+	</div>
+    </ul>
   </div>
-
+  </div>
   <div id="result"></div>
-  <div id="score">
-  	<ul>
-    	<li id="computerScore"><h4>Computer Score</h4></li>
-    	<li id="playerScore"><h4>Player Score</h4></li>
-    	<li id="tieScore"><h4>Draws</h4></li>
-  	</ul>
-  </div>
+  	<div id="score">
+  			<ul>
+  			<div class='col-md-4 col-sm-4 col-xs-4'>
+    			<li id="computerScore">Computer Score</li>
+    		</div>
+    		<div class='col-md-4 col-sm-4 col-xs-4'>
+    			<li id="playerScore">Player Score</li>
+    		</div>
+    		<div class='col-md-4 col-sm-4 col-xs-4'>
+    			<li id="tieScore">Draws</li>
+    		</div>
+  			</ul>
+  	</div>
+  </div>  
+</div>
+</div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript">
 
-// Global variable for remember wich option has selected the user
 var userOption = undefined;
+var computerScore = 0;
+var playerScore = 0;
+var tieScore = 0;
 
 function playWith(option){
-   // first, we deselect the previous selected element (if exist)
-   if (userOption != undefined)
-   {
+  
+   if (userOption != undefined) {
       userSelectionElement = document.getElementById(userOption);
-      // we remove the purple border (if exist)
       userSelectionElement.style.border = "5px #F8F8F8  solid";
    }	 		
-   // then, we select the user option and we add 
-   // a purple border
+  
    userOption = option;
    userSelectionElement = document.getElementById(option);
    userSelectionElement.style.border = "5px #990066 solid";
@@ -59,7 +91,7 @@ function playWith(option){
 
 function playGame(){
   	 		var computerOption = Math.random();
-			if (computerOption <0.34){
+			if (computerOption <0.34) {
 				computerOption = "rock";
 			}else if(computerOption <=0.67){
 				computerOption = "paper";
@@ -75,66 +107,74 @@ function playGame(){
 			
   	    }
 
-function score(){
-			var computerScore;
-			var playerScore;
-			var tieScore;
-			
-		   	document.getElementById("computerScore").innerHTML = parseInt(computerScore.innerHTML)++;
-
-			document.getElementById("playerScore").innerHTML = parseInt(playerScore.innerHTML)++;
+function compare(userSelection, computerSelection) {
 		
-			document.getElementById("tieScore").innerHTML = parseInt(tieScore.innerHTML)++;
-
-	}  
-
-function compare(userSelection, computerSelection){
-		 
 
 		    if (userSelection == computerSelection)
-		    {
+		    {  
+		       tieScore++;
+		       document.getElementById("tieScore").innerHTML = "<p>Draws</p> " + "<p>" + tieScore + "</p>";
 		       return "It is a draw!  You didn't lose. YET!!";
-		       tieScore++; //increments score
+		       
 		    }
 		    
 		    if (userSelection == "rock")
 		    {
 		        if (computerSelection == "scissor")
-		        {
+		        {	 
+		        	 playerScore++;
+		        	 document.getElementById("playerScore").innerHTML = "<p>Player Score</p> " + "<p>" + playerScore + "</p>";
 		             return "You win.";
-		             playerScore++; //increments score
+		             
 
 		        } else {
+
+		        	computerScore++;
+		        	document.getElementById("computerScore").innerHTML = "<p>Computer Score</p> " + "<p>" + computerScore + "</p>";
 		            return "The computer wins. You chose poorly.";
-		            computerScore++; //increments score
+		            
 		        }
 		        
 		    } else if (userSelection == "paper") {
 		        
 		        if (computerSelection == "rock")
 		        {
-		             return "You win." ;
-		             playerScore++; //increments score
+		             playerScore++;
+		        	 document.getElementById("playerScore").innerHTML = "<p>Player Score</p> " + "<p>" + playerScore + "</p>";
+		             return "You win.";  
 
 		        } else if("scissor") {
-		            return "The computer wins. You chose poorly." ;
-		            computerScore++; //increments score
+
+		            computerScore++;
+		        	document.getElementById("computerScore").innerHTML = "<p>Computer Score</p> " + "<p>" + computerScore + "</p>";
+		            return "The computer wins. You chose poorly.";
+
 		        }
 		        
 		    } else if (userSelection == "scissor") {
 		      
 		        if (computerSelection == "rock")
 		        {
+		            computerScore++;
+		        	document.getElementById("computerScore").innerHTML = "<p>Computer Score</p> " + "<p>" + computerScore + "</p>";
 		            return "The computer wins. You chose poorly.";
-		            computerScore++; //increments score
 
 		        }else{
-		            return "You win.";
-		            playerScore++; //increments score
+		             	playerScore++;
+		        	 	document.getElementById("playerScore").innerHTML = "<p>Player Score</p> " + "<p>" + playerScore + "</p>";
+		             	return "You win.";
 		        }
 		    }
 		}
+ 
 
+ 
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="assets/js/wow.js"></script>
+<script type="text/javascript">
+	new WOW().init();
+</script>
+
 </body>
 </html>
